@@ -1,4 +1,5 @@
 import { ThemeProvider, CssBaseline } from '@mui/material'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
