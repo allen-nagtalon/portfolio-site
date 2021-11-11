@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 const NavBar = _ => {
   return (
     <AppBar 
-      position='static'
+      position='fixed'
       elevation={0}
       color='transparent'
       sx={{ 
