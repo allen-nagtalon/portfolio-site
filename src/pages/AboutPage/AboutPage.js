@@ -6,10 +6,9 @@ const AboutPage = _ => {
       sx={{
         width: '100vw',
         height: '100vh',
-        color: 'blue'
       }}
     >
-      This is the Landing page.
+      This is the About page.
     </Container>
   )
 }
