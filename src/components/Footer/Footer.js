@@ -8,16 +8,16 @@ const Footer = _ => {
       elevation={0}
       color='transparent'
       sx={{ 
-        px: 6,
+        px: 48,
         py: 6
       }}
     >
       <Toolbar>
         <Box>
-          <Typography component='h1'>
-            Like what you see? Let's get in contact!
+          <Typography variant='h1'>
+            Let's get in contact!
           </Typography>
-          <Typography component='h3'>
+          <Typography variant='h5'>
             Drop me a line at ant.nagtalon22@gmail.com. Alternatively, you can also find me on LinkedIn.
           </Typography>
         </Box>
