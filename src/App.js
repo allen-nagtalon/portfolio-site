@@ -16,9 +16,7 @@ const App = _ => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <NavBar />
-        <Routes>
-          
-        </Routes>
+        <LandingPage />
         <Footer />
       </ThemeProvider>
     </BrowserRouter>
