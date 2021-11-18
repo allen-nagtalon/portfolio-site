@@ -17,6 +17,7 @@ const App = _ => {
         <CssBaseline />
         <NavBar />
         <LandingPage />
+        <AboutPage />
         <Footer />
       </ThemeProvider>
     </BrowserRouter>
