@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 
 import LandingPage from './pages/LandingPage'
 import AboutPage from './pages/AboutPage'
+import ProjectPage from './pages/ProjectPage'
 
 import theme from './theme'
 
@@ -18,6 +19,7 @@ const App = _ => {
         <NavBar />
         <LandingPage />
         <AboutPage />
+        <ProjectPage />
         <Footer />
       </ThemeProvider>
     </BrowserRouter>
