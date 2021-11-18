@@ -23,17 +23,21 @@ let theme = createTheme({
     ].join(','),
     h1: {
       fontFamily: 'Roboto',
-      fontSize: '1.8rem',
+      fontSize: '2.4rem',
       fontWeight: 'bolder'
     },
     h3: {
       fontFamily: 'Roboto',
-      fontSize: '1.8rem',
-      fontWeight: 'bold',
+      fontSize: '1.6rem',
     },
     h5: {
       fontFamily: 'Roboto',
       fontSize: '1.2rem'
+    },
+    landing: {
+      fontFamily: 'Roboto',
+      fontSize: '2.0rem',
+      fontWeight: 'bold'
     },
     mainlogo: {
       fontFamily: 'Playfair Display',
