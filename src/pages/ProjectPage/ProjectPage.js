@@ -1,5 +1,7 @@
 import React from 'react'
-import { Box } from '@mui/material'
+import { Container, Box } from '@mui/material'
+
+import ProjectDisplay from '../../components/ProjectDisplay'
 
 const ProjectPage = _ => {
   return (
@@ -7,12 +9,16 @@ const ProjectPage = _ => {
       component='div'
       sx={{
         display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         width: '100vw',
         height: '100vh',
         bgcolor: 'secondary.main'
       }}
     >
-      This is the ProjectPage.
+      <Container>
+        <ProjectDisplay />    
+      </Container>
     </Box>
   )
 }
