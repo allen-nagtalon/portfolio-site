@@ -6,22 +6,27 @@ const Footer = _ => {
     <AppBar 
       position='static'
       elevation={0}
-      color='transparent'
       sx={{ 
-        py: 6
+        py: 30
       }}
     >
       <Toolbar>
         <Container maxWidth='md'>
-          <Box sx={{ flexGrow: 1 }}>
-            <Typography variant='h1'>
-              Let's get in contact!
-            </Typography>
-            <Typography variant='h5'>
-              Drop me a line at ant.nagtalon22@gmail.com. Alternatively, you can also find me on LinkedIn.
-            </Typography>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'row'
+            }}
+          >
+            <Box sx={{ flexGrow: 2 }}>
+              <Typography variant='h1' mb={2}>
+                Let's get in contact!
+              </Typography>
+              <Typography variant='h5'>
+                Drop me a line at ant.nagtalon22@gmail.com. Alternatively, you can also find me on LinkedIn.
+              </Typography>
+            </Box>
           </Box>
-
         </Container>
       </Toolbar>
     </AppBar>

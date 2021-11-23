@@ -29,6 +29,7 @@ let theme = createTheme({
     h3: {
       fontFamily: 'Roboto',
       fontSize: '1.6rem',
+      fontWeight: 'bold'
     },
     h5: {
       fontFamily: 'Roboto',
