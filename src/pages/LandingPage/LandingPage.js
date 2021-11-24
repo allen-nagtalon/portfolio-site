@@ -20,7 +20,7 @@ const LandingPage = _ => {
           component='div'
           variant='landing'
         >
-          Hi, I'm Allen — a junior software engineer with a great passion for designing products that make things simple & obvious.
+          Hi, my name is [ Allen ] — a junior software engineer with a great passion for designing products that make things simple & obvious.
         </Typography>
       </Container>
     </Box>
