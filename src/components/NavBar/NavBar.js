@@ -37,7 +37,12 @@ const NavBar = _ => {
               href='/about'
               underline='none'
               variant='navlink'
-              sx={{ mx: 2 }}
+              sx={{ 
+                mx: 2,
+                '&:hover': {
+                  fontWeight: 'bolder'
+                }
+              }}
             >
               about
             </Link>
@@ -46,7 +51,12 @@ const NavBar = _ => {
               href='/projects'
               underline='none'
               variant='navlink'
-              sx={{ mx: 2 }}
+              sx={{ 
+                mx: 2,
+                '&:hover': {
+                  fontWeight: 'bolder'
+                }
+              }}
             >
               projects
             </Link>
@@ -55,7 +65,12 @@ const NavBar = _ => {
               href='/resume'
               underline='none'
               variant='navlink'
-              sx={{ mx: 2 }}
+              sx={{ 
+                mx: 2,
+                '&:hover': {
+                  fontWeight: 'bolder'
+                } 
+              }}
             >
               resume
             </Link>
