@@ -16,7 +16,9 @@ const ProjectPage = _ => {
         bgcolor: 'secondary.main'
       }}
     >
-      <Container>
+      <Container
+        maxWidth='md'
+      >
         <ProjectDisplay />    
       </Container>
     </Box>

@@ -1,16 +1,22 @@
 import { createTheme, responsiveFontSizes } from '@mui/material'
 
-const primary = '#000000'
+const primary = '#262626'
+const primaryLight = '#A5A5A5'
 const secondary = '#F6A192'
+const secondaryDark = '#F47B68'
+const secondaryLight = '#FAC6BC'
 const white = '#FFFFFF'
 
 let theme = createTheme({
   palette: {
     primary: { 
-      main: primary 
+      main: primary,
+      light: primaryLight
     },
     secondary: { 
-      main: secondary 
+      main: secondary,
+      dark: secondaryDark,
+      light: secondaryLight
     },
     white: {
       main: white
@@ -34,6 +40,10 @@ let theme = createTheme({
     h5: {
       fontFamily: 'Roboto',
       fontSize: '1.2rem'
+    },
+    h6: {
+      fontFamily: 'Roboto',
+      fontSize: '1.0rem'
     },
     landing: {
       fontFamily: 'Roboto',
