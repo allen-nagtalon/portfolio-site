@@ -84,11 +84,14 @@ const NavBar = _ => {
               mt: 1
             }}
           >
-            <IconButton>
+            <IconButton
+              href='https://www.linkedin.com/in/aanagtalon/'
+            >
               <LinkedInIcon />
             </IconButton>
 
             <IconButton
+              href='https://github.com/anthony-nagtalon'
               sx={{ ml: 1 }}
             >
               <GitHubIcon />
