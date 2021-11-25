@@ -87,10 +87,12 @@ const Project = props => {
                     </Typography>
                   : null
                 }
+                <Divider variant='middle' />
               </Box>
+              
               <CardActions
                 sx={{
-                  p: 2
+                  px: 2
                 }}
               >
                 { 
