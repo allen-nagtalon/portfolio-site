@@ -4,6 +4,7 @@ const AboutPage = _ => {
   return (
     <Box
       component='div'
+      id='about'
       sx={{
         display: 'flex',
         width: '100vw',

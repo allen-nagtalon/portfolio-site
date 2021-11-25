@@ -7,6 +7,7 @@ const ProjectPage = _ => {
   return (
     <Box
       component='div'
+      id='projects'
       sx={{
         display: 'flex',
         justifyContent: 'center',

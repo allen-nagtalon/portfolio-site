@@ -4,6 +4,7 @@ const LandingPage = _ => {
   return (
     <Box
       component='div'
+      id='landing'
       sx={{
         display: 'flex',
         width: '100vw',

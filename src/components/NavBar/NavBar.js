@@ -1,8 +1,10 @@
 import React from 'react'
-import { AppBar, Toolbar, Box, Link, Container, Typography, IconButton } from '@mui/material'
+import { AppBar, Toolbar, Box, Link, Container, IconButton } from '@mui/material'
 
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
+
+import Resume from '../../assets/resume.pdf'
 
 const NavBar = _ => {
   return (
@@ -21,7 +23,7 @@ const NavBar = _ => {
             }}
           >
             <Link 
-              href='/'
+              href='#landing'
               underline='none'
               variant='mainlogo'
             >
@@ -34,7 +36,7 @@ const NavBar = _ => {
             mt={1}
           >
             <Link 
-              href='/about'
+              href='#about'
               underline='none'
               variant='navlink'
               sx={{ 
@@ -48,7 +50,7 @@ const NavBar = _ => {
             </Link>
 
             <Link 
-              href='/projects'
+              href='#projects'
               underline='none'
               variant='navlink'
               sx={{ 
@@ -62,7 +64,7 @@ const NavBar = _ => {
             </Link>
 
             <Link 
-              href='/resume'
+              href={Resume}
               underline='none'
               variant='navlink'
               sx={{ 
