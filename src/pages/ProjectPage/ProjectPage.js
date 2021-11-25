@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Box } from '@mui/material'
+import { Container, Box, Divider, Chip } from '@mui/material'
 
 import ProjectDisplay from '../../components/ProjectDisplay'
 
@@ -20,7 +20,18 @@ const ProjectPage = _ => {
       <Container
         maxWidth='md'
       >
-        <ProjectDisplay />    
+        <Divider
+          sx={{
+            fontSize: '1.2rem',
+            fontFamily: 'Roboto'
+          }}
+        >
+          [ Projects ]
+        </Divider>
+        <Box component='div' py={4}>
+          <ProjectDisplay />          
+        </Box>  
+        <Divider />
       </Container>
     </Box>
   )

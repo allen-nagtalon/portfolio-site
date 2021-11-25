@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
-import { Grid, Paper, Box, Typography, Button, CardContent, CardMedia, CardActions } from '@mui/material'
+import { Grid, Paper, Box, Typography, Button, Divider, CardContent, CardMedia, CardActions } from '@mui/material'
 
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkIcon from '@mui/icons-material/Link'
@@ -66,7 +66,7 @@ const Project = props => {
                   p: 2
                 }}
               >
-                <Typography variant='h3' mb={2}>
+                <Typography variant='h3' mb={3}>
                   { props.project.title }
                   { 
                     props.project.soon
@@ -76,9 +76,10 @@ const Project = props => {
                     : null
                   }
                 </Typography>
-                <Typography variant='h6' mt={2}>
+                <Typography variant='h6' my={2}>
                   { props.project.desc }
                 </Typography>
+                <Divider variant='middle'/>
                 {
                   props.project.tech
                   ? <Typography variant='h6' color='secondary.main' mt={2} mb={3}>
