@@ -32,7 +32,7 @@ const NavBar = _ => {
           </Box>
 
           <Box
-            mx={8}
+            ml={8}
             mt={1}
           >
             <Link 
@@ -80,7 +80,7 @@ const NavBar = _ => {
 
           <Box
             sx={{
-              mx: 8,
+              ml: 8,
               mt: 1
             }}
           >
