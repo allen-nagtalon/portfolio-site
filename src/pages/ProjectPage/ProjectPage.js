@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Box, Divider, Chip } from '@mui/material'
+import { Container, Box, Divider } from '@mui/material'
 
 import ProjectDisplay from '../../components/ProjectDisplay'
 
