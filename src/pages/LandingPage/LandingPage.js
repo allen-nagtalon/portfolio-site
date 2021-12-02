@@ -1,4 +1,5 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Container, Typography, Fade } from '@mui/material'
+import VisibilitySensor from 'react-visibility-sensor'
 
 const LandingPage = _ => {
   return (
@@ -17,12 +18,21 @@ const LandingPage = _ => {
       <Container 
         maxWidth='md'
       >
-        <Typography
-          component='div'
-          variant='landing'
-        >
-          Hi, my name is [ Allen ] — a junior software engineer with a great passion for designing products that make things simple & obvious.
-        </Typography>
+        <VisibilitySensor>
+          {({isVisible}) =>
+            <Fade 
+              in={isVisible}
+              timeout={1000}
+            >
+              <Typography
+                component='div'
+                variant='landing'
+              >
+                Hi, my name is [ Allen ] — a junior software engineer with a great passion for designing products that make things simple & obvious.
+              </Typography>
+            </Fade>
+          }
+        </VisibilitySensor>
       </Container>
     </Box>
   )
