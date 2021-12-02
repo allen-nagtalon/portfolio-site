@@ -24,7 +24,7 @@ const NavBar = _ => {
           <Box
             sx={{
               flexGrow: 1,
-              px: 4
+              px: ((width < 800) ? 0 : 4)
             }}
           >
             <Link 
