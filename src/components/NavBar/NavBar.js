@@ -4,9 +4,14 @@ import { AppBar, Toolbar, Box, Link, Container, IconButton } from '@mui/material
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
+import DrawerMenu from '../DrawerMenu'
+import useWindowDimensions from '../useWindowDimensions/useWindowDimensions'
+
 import Resume from '../../assets/resume.pdf'
 
 const NavBar = _ => {
+  const { width } = useWindowDimensions()
+
   return (
     <AppBar 
       position='fixed'
@@ -31,72 +36,80 @@ const NavBar = _ => {
             </Link>
           </Box>
 
-          <Box
-            ml={8}
-            mt={1}
-          >
-            <Link 
-              href='#about'
-              underline='none'
-              variant='navlink'
-              sx={{ 
-                mx: 2,
-                '&:hover': {
-                  fontWeight: 'bolder'
-                }
-              }}
-            >
-              about
-            </Link>
+          {
+            (width > 800) ?
+            <>
+              <Box
+                ml={8}
+                mt={1}
+              >
+                <Link 
+                  href='#about'
+                  underline='none'
+                  variant='navlink'
+                  sx={{ 
+                    mx: 2,
+                    '&:hover': {
+                      fontWeight: 'bolder'
+                    }
+                  }}
+                >
+                  about
+                </Link>
 
-            <Link 
-              href='#projects'
-              underline='none'
-              variant='navlink'
-              sx={{ 
-                mx: 2,
-                '&:hover': {
-                  fontWeight: 'bolder'
-                }
-              }}
-            >
-              projects
-            </Link>
+                <Link 
+                  href='#projects'
+                  underline='none'
+                  variant='navlink'
+                  sx={{ 
+                    mx: 2,
+                    '&:hover': {
+                      fontWeight: 'bolder'
+                    }
+                  }}
+                >
+                  projects
+                </Link>
 
-            <Link 
-              href={Resume}
-              underline='none'
-              variant='navlink'
-              sx={{ 
-                mx: 2,
-                '&:hover': {
-                  fontWeight: 'bolder'
-                } 
-              }}
-            >
-              resume
-            </Link>
-          </Box>
+                <Link 
+                  href={Resume}
+                  underline='none'
+                  variant='navlink'
+                  sx={{ 
+                    mx: 2,
+                    '&:hover': {
+                      fontWeight: 'bolder'
+                    } 
+                  }}
+                >
+                  resume
+                </Link>
+              </Box>
 
-          <Box
-            sx={{
-              ml: 8,
-              mt: 1
-            }}
-          >
-            <IconButton
-              href='https://www.linkedin.com/in/aanagtalon/'
-            >
-              <LinkedInIcon />
-            </IconButton>
+              <Box
+                sx={{
+                  ml: 8,
+                  mt: 1
+                }}
+              >
+                <IconButton
+                  href='https://www.linkedin.com/in/aanagtalon/'
+                >
+                  <LinkedInIcon />
+                </IconButton>
 
-            <IconButton
-              href='https://github.com/anthony-nagtalon'
-              sx={{ ml: 1 }}
-            >
-              <GitHubIcon />
-            </IconButton>
-          </Box>
+                <IconButton
+                  href='https://github.com/anthony-nagtalon'
+                  sx={{ ml: 1 }}
+                >
+                  <GitHubIcon />
+                </IconButton>
+              </Box>
+            </>
+            : <DrawerMenu />
+          }
+          
+          
         </Toolbar>
       </Container>
     </AppBar>
