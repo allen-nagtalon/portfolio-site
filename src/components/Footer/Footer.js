@@ -8,7 +8,7 @@ const Footer = _ => {
       position='static'
       elevation={0}
       sx={{ 
-        py: 30
+        py: 20
       }}
     >
       <Toolbar>
