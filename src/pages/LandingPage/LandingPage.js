@@ -22,7 +22,7 @@ const LandingPage = _ => {
           {({isVisible}) =>
             <Fade 
               in={isVisible}
-              timeout={1000}
+              timeout={2000}
             >
               <Typography
                 component='div'
