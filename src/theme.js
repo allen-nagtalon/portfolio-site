@@ -53,8 +53,11 @@ let theme = createTheme({
     },
     landing: {
       fontFamily: 'Roboto',
-      fontSize: '2.0rem',
-      fontWeight: 'bold'
+      fontSize: '1.4rem',
+      fontWeight: 'bold',
+      '@media (min-width:600px)': {
+        fontSize: '2.0rem'
+      }
     },
     mainlogo: {
       fontFamily: 'Playfair Display',
