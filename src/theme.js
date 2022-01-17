@@ -39,7 +39,10 @@ let theme = createTheme({
     },
     h5: {
       fontFamily: 'Roboto',
-      fontSize: '1.2rem'
+      fontSize: '0.9rem',
+      '@media (min-width:600px)': {
+        fontSize: '1.2rem'
+      }
     },
     h6: {
       fontFamily: 'Roboto',
