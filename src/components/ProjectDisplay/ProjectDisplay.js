@@ -5,11 +5,15 @@ import { Grid, Paper, Box, Typography, Button, Divider, CardContent, CardMedia, 
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkIcon from '@mui/icons-material/Link'
 
+import useWindowDimensions from '../useWindowDimensions/useWindowDimensions'
+
 import TriadTracker from '../../assets/triadtracker1.jpg'
 import SudokuSolver from '../../assets/sudokusolver1.jpg'
 import Wishmaker from '../../assets/wishmaker1.jpg'
 
 const ProjectDisplay = _ => {
+  const { width } = useWindowDimensions()
+
   var projects = [
     {
       title: 'Triad Tracker',
@@ -38,16 +42,16 @@ const ProjectDisplay = _ => {
     <Carousel
       animation='slide'
       duration={750}
-      navButtonsAlwaysVisible='true'
+      navButtonsAlwaysInvisible="false"
     >
-      { projects.map( (project, i) => <Project key={i} project={project} /> ) }
+      { projects.map( (project, i) => <VerticalProject key={i} project={project} /> ) }
     </Carousel>
   )
 }
 
-const Project = props => {
+const VerticalProject = props => {
   return (
-    <Box sx={{ px: 8, py: 2 }}>
+    <Box sx={{ px: 2, py: 2 }}>
       <Paper elevation={8} p={2}>
         <Grid 
           container 
@@ -55,7 +59,8 @@ const Project = props => {
         >
           <Grid 
             item 
-            xs={6}
+            xs={12}
+            md={6}
             sx={{ 
               height: '50vh'
             }}
@@ -112,7 +117,7 @@ const Project = props => {
               </CardActions>
             </CardContent>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <CardMedia
               component='img'
               image={ props.project.image }
@@ -122,6 +127,16 @@ const Project = props => {
             />
           </Grid>
         </Grid>
+      </Paper>
+    </Box>
+  )
+}
+
+const HorizontalProject = props => {
+  return (
+    <Box sx={{ px: 8, py: 2 }}>
+      <Paper elevation={8} p={2}>
+
       </Paper>
     </Box>
   )

@@ -43,7 +43,10 @@ let theme = createTheme({
     },
     h6: {
       fontFamily: 'Roboto',
-      fontSize: '1.0rem'
+      fontSize: '0.8rem',
+      '@media (min-width:600px)': {
+        fontSize: '1.0rem'
+      }
     },
     landing: {
       fontFamily: 'Roboto',
