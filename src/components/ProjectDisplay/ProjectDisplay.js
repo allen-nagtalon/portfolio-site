@@ -12,8 +12,6 @@ import SudokuSolver from '../../assets/sudokusolver1.jpg'
 import Wishmaker from '../../assets/wishmaker1.jpg'
 
 const ProjectDisplay = _ => {
-  const { width } = useWindowDimensions()
-
   var projects = [
     {
       title: 'Triad Tracker',
@@ -44,34 +42,43 @@ const ProjectDisplay = _ => {
       duration={750}
       navButtonsAlwaysInvisible="false"
     >
-      { projects.map( (project, i) => <VerticalProject key={i} project={project} /> ) }
+      { projects.map( (project, i) => <Project key={i} project={project} /> ) }
     </Carousel>
   )
 }
 
-const VerticalProject = props => {
+const Project = props => {
+  const { width } = useWindowDimensions()
+
   return (
-    <Box sx={{ px: 2, py: 2 }}>
-      <Paper elevation={8} p={2}>
+    <Box sx={{ p: 2 }}>
+      <Paper elevation={8}>
         <Grid 
           container 
           spacing={0}
+          sx={{
+            height: '50vh'
+          }}
         >
           <Grid 
             item 
             xs={12}
-            md={6}
-            sx={{ 
-              height: '50vh'
+            sm={6}
+            sx={{
+              height: '25vh'
             }}
           > 
             <CardContent>
               <Box 
                 sx={{
-                  p: 2
+                  pt: (width < 600) ? 1 : 5,
+                  px: (width < 600) ? 0 : 3
                 }}
               >
-                <Typography variant='h3' mb={3}>
+                <Typography 
+                  variant='h3'
+                  mb={1}
+                >
                   { props.project.title }
                   { 
                     props.project.soon
@@ -81,18 +88,21 @@ const VerticalProject = props => {
                     : null
                   }
                 </Typography>
-                <Typography variant='h6' my={2}>
+                <Typography variant='h6' mb={2}>
                   { props.project.desc }
                 </Typography>
-                <Divider variant='middle'/>
+                
                 {
-                  props.project.tech
-                  ? <Typography variant='h6' color='secondary.main' mt={2} mb={3}>
-                      { props.project.tech.join(' • ') }
-                    </Typography>
+                  props.project.tech && (width > 600)
+                  ? <>
+                      <Divider variant='middle'/>
+                      <Typography variant='h6' color='secondary.main' mt={2} mb={3}>
+                        { props.project.tech.join(' • ') }
+                      </Typography>
+                      <Divider variant='middle' />
+                    </>
                   : null
                 }
-                <Divider variant='middle' />
               </Box>
               
               <CardActions
@@ -101,14 +111,14 @@ const VerticalProject = props => {
                 }}
               >
                 { 
-                  props.project.github
+                  props.project.github && (width > 600)
                   ? <Button href={ props.project.github }>
                       <GitHubIcon />
                     </Button>
                   : null
                 }
                 { 
-                  props.project.link
+                  props.project.link && (width > 600)
                   ? <Button href={ props.project.link }>
                       <LinkIcon />
                     </Button>
@@ -117,26 +127,22 @@ const VerticalProject = props => {
               </CardActions>
             </CardContent>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid 
+            item 
+            xs={12} 
+            sm={6}
+          >
             <CardMedia
               component='img'
               image={ props.project.image }
-              sx={{
-                height: '100%'
-              }}
+              sx={
+                (width < 600) ?
+                  { height: '25vh' }
+                  : { height: '100%' }
+              }
             />
           </Grid>
         </Grid>
-      </Paper>
-    </Box>
-  )
-}
-
-const HorizontalProject = props => {
-  return (
-    <Box sx={{ px: 8, py: 2 }}>
-      <Paper elevation={8} p={2}>
-
       </Paper>
     </Box>
   )
