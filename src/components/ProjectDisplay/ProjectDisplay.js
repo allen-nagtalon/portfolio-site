@@ -7,12 +7,28 @@ import LinkIcon from '@mui/icons-material/Link'
 
 import useWindowDimensions from '../useWindowDimensions/useWindowDimensions'
 
+import Flappybird from '../../assets/flappybird1.png'
 import TriadTracker from '../../assets/triadtracker1.jpg'
+import ZeldaLike from '../../assets/zeldalike1.png'
 import SudokuSolver from '../../assets/sudokusolver1.jpg'
 import Wishmaker from '../../assets/wishmaker1.jpg'
 
 const ProjectDisplay = _ => {
   var projects = [
+    {
+      title: 'NEAT Flappy Bird',
+      desc: 'A Flappy Bird clone created in Python using Pygame, developed to demonstrate the application of a NeuroEvolution of Augmenting Topologies (NEAT) neural network that learns to play the game optimally.',
+      github: 'https://github.com/anthony-nagtalon/neat_flappy',
+      tech: [ 'Python', 'Pygame', 'Artificial Intelligence', 'NEAT', 'VSCode' ],
+      image: Flappybird
+    },
+    {
+      title: 'Pygame Top-View RPG',
+      desc: 'A top-view 2D game developed in Python using Pygame to learn the basic and intermediate features of the modules. Created following the online course for Pygame development via Clear Code.',
+      github: 'https://github.com/anthony-nagtalon/zelda_like_game',
+      tech: [ 'Python', 'Pygame', 'Tiled', 'VSCode' ],
+      image: ZeldaLike
+    },
     {
       title: 'Triad Tracker',
       desc: 'A web application tool for the game "Final Fantasy XIV". Utilizes a React-based Front-End with a Django-based RESTful API Back-End.',
